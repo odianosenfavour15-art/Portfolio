@@ -78,13 +78,12 @@ a{
 /*=====BOTTOM BAR=====*/
 .contact{
     position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    bottom: 20px;
+    right: 20px;
+    left: auto;
     display: flex;
-    justify-content: right;
-    gap: 60px;
-    padding: 14px;
+    gap: 10px;
+    z-index: 99;
 }
 
 .contact a{
@@ -156,11 +155,11 @@ a{
     background:white;
 }
 
-.portfolio-image{
+.portfolio-image img{
     transition: transform 0.3s ease;
 }
 
-.portfolio-image:hover{
+.portfolio-image:hover img{
     transform: scale(1.05);
 }
 
@@ -170,7 +169,7 @@ a{
     overflow: hidden;
 }
 
-.portfolio-image image{
+.portfolio-image img{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -265,4 +264,89 @@ a{
 
 .bottom-bar span {
     color: #aaa;
+}
+
+@media (max-width: 1024px){
+    .links{
+        gap: 18px;
+    }
+
+    .links a, .links select{
+        font-size: 14px;
+    }
+
+    .MyLogo{
+        width: 80px;
+        height: 80px; 
+    }
+
+    .portfolio-banner{
+        height: 220px;
+    }
+    
+    .portfolio-container{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .footer-info{
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 600px){
+    header{
+        padding: 10px 15px;
+    }
+
+    .nav{
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .links{
+        display: none;
+    }
+
+    .btn{
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+    
+    .portfolio-banner{
+        height: 180px;
+        padding: 0 15px;
+    }
+
+    .portfolio-banner h1{
+        font-size: 26px;
+    }
+
+    .portfolio-click{
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .portfolio-click button{
+        padding: 10px 15px;
+        font-size: 11px;
+    }
+
+    .portfolio-container{
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .portfolio-image{
+        height: 220px;
+    }
+
+    .footer-info{
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 30px 20px;
+    }
+
 }
